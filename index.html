@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Laras - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #2d3250;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: white;
+            padding: 20px;
+        }
+        .hero img {
+            width: 300px;
+            height: auto;
+            flex-shrink: 0;
+        }
+        .hero .text {
+            max-width: 600px;
+            margin-left: 30px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Futura Md BT';
+            color: #424769;
+        }
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            font-family: 'Chaparral Pro Light';
+            color: #424769;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2d3250;
+            color: white;
+        }
+
+        .profil-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #424769;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .profil-btn:hover {
+            background-color: #2d3250;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero img {
+                margin-bottom: 20px;
+                width: 200px;
+            }
+            .hero .text {
+                margin-left: 0;
+            }
+            nav ul {
+                gap: 10px; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .hero img {
+                width: 150px; 
+            }
+            .hero h1 {
+                font-size: 1.8em; 
+            }
+            .hero p {
+                font-size: 1em; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">Laras</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Profil</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="gambar/photo_profil.jpg" alt="Foto Profil Laras">
+            <div class="text">
+                <h1 id="greeting"></h1>
+                <P>Hai, saya Laras!</P>
+                <p>Saya orangnya teliti, suka hal-hal yang berbau seni, dan selalu berusaha jujur serta bertanggung jawab dalam segala hal. Meski sibuk, saya percaya pentingnya kreativitas untuk membuat hidup lebih berwarna.</p>
+                
+                <button class="profil-btn" onclick="window.location.href='about.html'">Ke Profil</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Portofolio Laras</p>
+    </footer>
+    <script>
+        function getGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            if (hours < 12) {
+                return "Selamat Pagi!";
+            } else if (hours < 18) {
+                return "Selamat Siang!";
+            } else {
+                return "Selamat Malam!";
+            }
+        }
+
+        document.getElementById("greeting").textContent = getGreeting();
+    </script>
+</body>
+</html>

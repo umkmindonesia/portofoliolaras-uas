@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Laras - Profil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2d3250;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .hero img {
+            width: 300px;
+            height: auto;
+            flex-shrink: 0;
+            order: 2; 
+        }
+
+        .hero .text {
+            max-width: 600px;
+            margin-right: 30px;
+            order: 1; 
+            color: #424769;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Futura Md BT';
+            color: #424769;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            font-family: 'Chaparral Pro Light';
+            color: #424769;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2d3250;
+            color: white;
+        }
+
+        .about-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #424769;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .about-btn:hover {
+            background-color: #2d3250;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero img {
+                margin-bottom: 20px;
+                width: 200px; 
+                order: 0; 
+            }
+            .hero .text {
+                margin-right: 0;
+                order: 1;
+            }
+            nav ul {
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .hero img {
+                width: 150px; 
+                margin-top: 20px;
+            }
+            .hero {
+                padding-top: 10px;
+            }
+            .hero h1 {
+                font-size: 1.8em; 
+            }
+            .hero p {
+                font-size: 1em; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">Laras</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Profil</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="text">
+                <h1>Tentang Saya</h1>
+                <p>Saya Laras Wulansari, mahasiswa Informatika di Universitas PGRI Semarang angkatan 2023.</p>
+                <p>Saya aktif dalam UKM GISMA di kampus sejak 2023 hingga sekarang.</p>
+                <p>Sebagai anggota paduan suara, saya sering tampil di berbagai acara kampus dan terlibat dalam kepanitiaan kegiatan.</p>
+                <p>Saya memiliki keahlian dalam menggambar, bekerja sama dalam tim, dan berbahasa Inggris tingkat menengah. Di waktu luang, saya senang menyanyi, menggambar, dan baru-baru ini mulai tertarik dengan dunia make-up.</p>
+                
+                <button class="about-btn" onclick="window.location.href='gallery.html'">Ke Galeri</button>
+            </div>
+            <img src="gambar/photo_profil4.jpg" alt="Foto Profil Laras">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Portofolio Laras</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Laras - Galeri</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2d3250;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        h1 {
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Futura Md BT';
+            color: #424769;
+        }
+
+        h3 {
+            font-family: 'Futura Md BT';
+            color: #424769;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .gallery-item {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            gap: 20px;
+        }
+
+        .gallery-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .gallery-item img {
+            max-width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            font-family: 'Chaparral Pro Light';
+            color: #424769;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2d3250;
+            color: white;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 10px; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+    <header>
+        <div class="brand">Laras</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Profil</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <h1>Galeri Laras</h1>
+            <div class="gallery-item">
+                <img src="gambar/galeri1.jpg" alt="Karya 1">
+                <div>
+                    <h3>Potret Wajah Tersenyum</h3>
+                    <p class="gallery-description">Gambar ini menampilkan potret close-up wajah seseorang dengan ekspresi senyum lebar yang menonjolkan garis-garis wajah alami dan keriputnya.</p>
+                    <p class="gallery-description">Karya ini menggambarkan kehangatan dan kebahagiaan yang terlihat dari detail mata yang menyipit serta tekstur kulit yang realistis. Teknik pensil yang digunakan berhasil menciptakan bayangan dan dimensi yang memperkuat kesan emosional.
+                    </p>
+                    <p class="gallery-description">Gambar ini dibuat berdasarkan referensi dari Pinterest dan merupakan latihan dalam mengasah kemampuan menggambar potret manusia dengan fokus pada ekspresi wajah.
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gambar/galeri2.jpg" alt="Karya 2">
+                <div>
+                    <h3>Potret Fokus Mata</h3>
+                    <p class="gallery-description">Gambar ini adalah sketsa close-up yang fokus pada area mata dan hidung seseorang, dengan detail intens pada tatapan mata yang penuh emosi. Bayangan gelap di sekitar mata menambah kedalaman dan membuat kesan yang mendalam.</p>
+                    <p class="gallery-description">Teknik shading halus di hidung dan kerutan di sekitar mata menunjukkan keahlian dalam menangkap tekstur dan detail.
+                    </p>
+                    <p class="gallery-description">Karya ini diambil dari foto referensi di Pinterest dan bertujuan untuk mengeksplorasi detail kecil yang sering menjadi tantangan dalam seni potret.
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gambar/galeri3.jpg" alt="Karya 3">
+                <div>
+                    <h3>Lampu Jalanan Klasik</h3>
+                    <p class="gallery-description">Gambar ini menampilkan sketsa sebuah lampu jalanan bergaya klasik dengan desain elegan dan lekukan dekoratif pada tiangnya.</p>
+                    <p class="gallery-description">Teknik pensil yang digunakan berhasil menampilkan detail bentuk geometris dan bayangan halus yang memberi kesan realistis. Elemen ini mengingatkan pada suasana malam di jalan-jalan kota tua.
+                    </p>
+                    <p class="gallery-description">Sketsa ini juga terinspirasi dari referensi Pinterest, dengan tujuan melatih kemampuan menggambar objek benda mati dan menggabungkan estetika klasik dengan teknik pencahayaan.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Portofolio Laras</p>
+    </footer>
+</body>
+</html>
